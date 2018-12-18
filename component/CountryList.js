@@ -1,4 +1,7 @@
 import React, { Component } from "react"
+import { connect } from "react-redux"
+import * as actions from "../actions"
+
 class CountryList extends Component {
   state = {
     countryName: ""
@@ -8,15 +11,13 @@ class CountryList extends Component {
       <li
         className="items"
         key={each.currency}
-        onClick={() => this.props.handleClick(each.currency)}
+        onClick={() => this.props.changeCountry(each.currency)}
       >
         {each.country}
       </li>
     )
   }
   handleChange = e => {
-    console.log(e.target.value)
-
     this.setState({
       countryName: e.target.value
     })
@@ -39,15 +40,18 @@ class CountryList extends Component {
             : this.props.countries.map(each => this.renderCountry(each))}
         </ul>
         <style jsx="true">
-        {`
-          .items {
-            cursor: pointer;
-            width: 200px;
-          }
-        `}
-      </style>
+          {`
+            .items {
+              cursor: pointer;
+              width: 200px;
+            }
+          `}
+        </style>
       </>
     )
   }
 }
-export default CountryList
+export default connect(
+  null,
+  actions
+)(CountryList)

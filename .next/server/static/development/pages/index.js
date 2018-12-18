@@ -93,6 +93,41 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./actions/index.js":
+/*!**************************!*\
+  !*** ./actions/index.js ***!
+  \**************************/
+/*! exports provided: changeCountry */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeCountry", function() { return changeCountry; });
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./actions/types.js");
+
+var changeCountry = function changeCountry(value) {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_0__["CHANGE_COUNTRY"],
+    payload: value
+  };
+};
+
+/***/ }),
+
+/***/ "./actions/types.js":
+/*!**************************!*\
+  !*** ./actions/types.js ***!
+  \**************************/
+/*! exports provided: CHANGE_COUNTRY */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_COUNTRY", function() { return CHANGE_COUNTRY; });
+var CHANGE_COUNTRY = "change_country";
+
+/***/ }),
+
 /***/ "./component/CountryList.js":
 /*!**********************************!*\
   !*** ./component/CountryList.js ***!
@@ -104,6 +139,9 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions */ "./actions/index.js");
 var _jsxFileName = "/home/kiran/Desktop/bitpriz/component/CountryList.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -125,6 +163,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -155,19 +195,17 @@ function (_Component) {
         className: "items",
         key: each.currency,
         onClick: function onClick() {
-          return _this.props.handleClick(each.currency);
+          return _this.props.changeCountry(each.currency);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 11
         },
         __self: this
       }, each.country);
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleChange", function (e) {
-      console.log(e.target.value);
-
       _this.setState({
         countryName: e.target.value
       });
@@ -187,13 +225,13 @@ function (_Component) {
         onChange: this.handleChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, this.state.countryName ? this.props.countries.filter(function (each) {
@@ -206,17 +244,17 @@ function (_Component) {
         jsx: "true",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 42
         },
         __self: this
-      }, "\n          .items {\n            cursor: pointer;\n            width: 200px;\n          }\n        "));
+      }, "\n            .items {\n              cursor: pointer;\n              width: 200px;\n            }\n          "));
     }
   }]);
 
   return CountryList;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (CountryList);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, _actions__WEBPACK_IMPORTED_MODULE_2__)(CountryList));
 
 /***/ }),
 
@@ -235,6 +273,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions */ "./actions/index.js");
 
 var _jsxFileName = "/home/kiran/Desktop/bitpriz/component/Details.js";
 
@@ -261,6 +302,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -305,11 +348,10 @@ function (_Component) {
 
               _this.setState({
                 data: res.data.bpi
-              });
+              }); // console.log(res.data.bpi)
 
-              console.log(res.data.bpi);
 
-            case 5:
+            case 4:
             case "end":
               return _context.stop();
           }
@@ -323,23 +365,27 @@ function (_Component) {
   _createClass(Details, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, this.props.code), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 21
         },
         __self: this
-      }, this.state.data && this.state.data[this.props.code].rate), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-        onClick: this.props.clearSelection,
+      }, this.props.code), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
+        },
+        __self: this
+      }, this.state.data && this.state.data[this.props.code].rate), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _this2.props.changeCountry(null);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
         },
         __self: this
       }, "back"));
@@ -349,7 +395,7 @@ function (_Component) {
   return Details;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Details);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(null, _actions__WEBPACK_IMPORTED_MODULE_4__)(Details));
 
 /***/ }),
 
@@ -547,6 +593,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _component_Details__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../component/Details */ "./component/Details.js");
 /* harmony import */ var _component_CountryList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../component/CountryList */ "./component/CountryList.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../actions */ "./actions/index.js");
 
 var _jsxFileName = "/home/kiran/Desktop/bitpriz/pages/index.js";
 
@@ -564,15 +613,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -586,35 +635,9 @@ function (_Component) {
   _inherits(index, _Component);
 
   function index() {
-    var _getPrototypeOf2;
-
-    var _this;
-
     _classCallCheck(this, index);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(index)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      selectedCountry: null
-    });
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "clearSelection", function () {
-      _this.setState({
-        selectedCountry: null
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClick", function (code) {
-      _this.setState({
-        selectedCountry: code
-      });
-    });
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(index).apply(this, arguments));
   }
 
   _createClass(index, [{
@@ -623,30 +646,28 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_component_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 12
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 13
         },
         __self: this
-      }, this.state.selectedCountry ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_component_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        clearSelection: this.clearSelection,
-        code: this.state.selectedCountry,
+      }, this.props.selectedCountry ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_component_Details__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        code: this.props.selectedCountry,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 15
         },
         __self: this
       }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_component_CountryList__WEBPACK_IMPORTED_MODULE_5__["default"], {
         countries: this.props.countries,
-        handleClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 17
         },
         __self: this
       })));
@@ -658,31 +679,45 @@ function (_Component) {
 
 index.getInitialProps =
 /*#__PURE__*/
-_asyncToGenerator(
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var res;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://api.coindesk.com/v1/bpi/supported-currencies.json");
+function () {
+  var _ref2 = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
+    var store, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            store = _ref.store;
+            _context.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://api.coindesk.com/v1/bpi/supported-currencies.json");
 
-        case 2:
-          res = _context.sent;
-          return _context.abrupt("return", {
-            countries: res.data
-          });
+          case 3:
+            res = _context.sent;
+            return _context.abrupt("return", {
+              countries: res.data
+            });
 
-        case 4:
-        case "end":
-          return _context.stop();
+          case 5:
+          case "end":
+            return _context.stop();
+        }
       }
-    }
-  }, _callee, this);
-}));
-/* harmony default export */ __webpack_exports__["default"] = (index);
+    }, _callee, this);
+  }));
+
+  return function (_x) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    selectedCountry: state
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_7__)(index));
 
 /***/ }),
 
@@ -750,6 +785,17 @@ module.exports = require("next/link");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
 
 /***/ })
 
