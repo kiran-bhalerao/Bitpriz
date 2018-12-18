@@ -21,7 +21,7 @@ class index extends Component {
     )
   }
 }
-index.getInitialProps = async ({ store }) => {
+index.getInitialProps = async () => {
   const res = await axios.get(
     "https://api.coindesk.com/v1/bpi/supported-currencies.json"
   )

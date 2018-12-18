@@ -679,37 +679,30 @@ function (_Component) {
 
 index.getInitialProps =
 /*#__PURE__*/
-function () {
-  var _ref2 = _asyncToGenerator(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-    var store, res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            store = _ref.store;
-            _context.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://api.coindesk.com/v1/bpi/supported-currencies.json");
+_asyncToGenerator(
+/*#__PURE__*/
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+  var res;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://api.coindesk.com/v1/bpi/supported-currencies.json");
 
-          case 3:
-            res = _context.sent;
-            return _context.abrupt("return", {
-              countries: res.data
-            });
+        case 2:
+          res = _context.sent;
+          return _context.abrupt("return", {
+            countries: res.data
+          });
 
-          case 5:
-          case "end":
-            return _context.stop();
-        }
+        case 4:
+        case "end":
+          return _context.stop();
       }
-    }, _callee, this);
-  }));
-
-  return function (_x) {
-    return _ref2.apply(this, arguments);
-  };
-}();
+    }
+  }, _callee, this);
+}));
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
