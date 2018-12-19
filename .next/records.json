@@ -589,18 +589,22 @@
       "static/eNsGA2FXEdmrIsKby1JIW/pages/about.js": 4,
       "static/eNsGA2FXEdmrIsKby1JIW/pages/index.js": 5,
       "static/eNsGA2FXEdmrIsKby1JIW/pages/_error.js": 6,
-      "styles": 7
+      "styles": 7,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/_app.js": 8,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/about.js": 9,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/index.js": 10,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/_error.js": 11
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
+      10,
+      11,
       2,
-      3,
-      4,
-      5,
-      6,
-      7
+      7,
+      8,
+      9
     ]
   }
 }
