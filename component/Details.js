@@ -13,15 +13,47 @@ class Details extends Component {
     this.setState({
       data: res.data.bpi
     })
-    // console.log(res.data.bpi)
+    console.log(res.data.bpi)
   }
   render() {
     return (
-      <>
-        <h1>{this.props.code}</h1>
-        <p>{this.state.data && this.state.data[this.props.code].rate}</p>
-        <button onClick={() => this.props.changeCountry(null)}>back</button>
-      </>
+      <div className="row">
+        <div className="col-md-5">
+          <div className="price-card">
+            <h1>{this.props.code}</h1>
+            <div>
+              <span class="badge badge-danger">Price</span>
+              <span className="price-span">
+                {this.state.data && this.state.data[this.props.code].rate.slice(0,10)}
+              </span>
+            </div>
+            <p className="mt-2">
+              {this.state.data && this.state.data[this.props.code].description}
+            </p>
+          </div>
+        </div>
+        <div className="col-md-2"><h1>VS</h1></div>
+        <div className="col-md-5">
+          <div className="price-card">
+            <h1>USD</h1>
+            <div>
+              <span class="badge badge-danger">Price</span>
+              <span className="price-span">
+                {this.state.data && this.state.data.USD.rate}
+              </span>
+            </div>
+            <p className="mt-2">
+              {this.state.data && this.state.data.USD.description}
+            </p>
+          </div>
+        </div>
+        <button
+          className="btn btn-lg btn-block btn-warning mt-4"
+          onClick={() => this.props.changeCountry(null)}
+        >
+          back
+        </button>
+      </div>
     )
   }
 }

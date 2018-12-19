@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Navbar from "../component/Navbar"
+import "../style.css"
 import axios from "axios"
 import Details from "../component/Details"
 import CountryList from "../component/CountryList"
@@ -8,7 +9,7 @@ import * as actions from "../actions"
 class index extends Component {
   render() {
     return (
-      <>
+      <React.Fragment>
         <Navbar />
         <div className="container">
           {this.props.selectedCountry ? (
@@ -17,7 +18,7 @@ class index extends Component {
             <CountryList countries={this.props.countries} />
           )}
         </div>
-      </>
+      </React.Fragment>
     )
   }
 }
