@@ -1,0 +1,73 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "external \"react\"": 0,
+      "external \"@babel/runtime/regenerator\"": 1,
+      "external \"react-redux\"": 2,
+      "external \"next/link\"": 3,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!actions/types.js": 4,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!component/Navbar.js": 5,
+      "external \"next/head\"": 6,
+      "external \"axios\"": 7,
+      "external \"next/app\"": 8,
+      "node_modules/ignore-loader/index.js!style.css": 9,
+      "external \"next-redux-wrapper\"": 10,
+      "external \"redux\"": 11,
+      "multi ./pages/_app.js": 12,
+      "multi ./pages/about.js": 13,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/about.js": 14,
+      "multi ./pages/index.js": 15,
+      "multi node_modules/next/dist/pages/_error.js": 16,
+      "node_modules/next/dist/pages/_error.js": 17,
+      "external \"next/error\"": 18,
+      "multi node_modules/next/dist/pages/_document.js": 19,
+      "node_modules/next/dist/pages/_document.js": 20,
+      "external \"next/document\"": 21,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index.js 3ff95d20b21f999b9a1fbce2ef5dac47": 22,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_app.js b95325e68b62d6ca36585ffa676dfae0": 23
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23
+    }
+  },
+  "chunks": {
+    "byName": {
+      "static/eNsGA2FXEdmrIsKby1JIW/pages/_app.js": 0,
+      "static/eNsGA2FXEdmrIsKby1JIW/pages/about.js": 1,
+      "static/eNsGA2FXEdmrIsKby1JIW/pages/index.js": 2,
+      "static/eNsGA2FXEdmrIsKby1JIW/pages/_error.js": 3,
+      "static/eNsGA2FXEdmrIsKby1JIW/pages/_document.js": 4
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}
