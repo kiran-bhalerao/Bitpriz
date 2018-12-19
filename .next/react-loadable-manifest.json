@@ -415,7 +415,7 @@
       "publicPath": "static/chunks/commons.6b0601479bd73bafa981.js"
     }
   ],
-  "./assertThisInitialized": [
+  "@babel/runtime-corejs2/helpers/assertThisInitialized": [
     {
       "id": 53,
       "name": "./node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js",
@@ -519,7 +519,7 @@
       "publicPath": "static/chunks/commons.6b0601479bd73bafa981.js"
     }
   ],
-  "../../modules/_wks-ext": [
+  "./_wks-ext": [
     {
       "id": 67,
       "name": "./node_modules/core-js/library/modules/_wks-ext.js",

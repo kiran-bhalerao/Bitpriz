@@ -59,15 +59,20 @@
       "static/eNsGA2FXEdmrIsKby1JIW/pages/about.js": 1,
       "static/eNsGA2FXEdmrIsKby1JIW/pages/index.js": 2,
       "static/eNsGA2FXEdmrIsKby1JIW/pages/_error.js": 3,
-      "static/eNsGA2FXEdmrIsKby1JIW/pages/_document.js": 4
+      "static/eNsGA2FXEdmrIsKby1JIW/pages/_document.js": 4,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/_app.js": 5,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/about.js": 6,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/index.js": 7,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/_error.js": 8,
+      "static/IwDo0IMCL31Mkd8Y0gRCQ/pages/_document.js": 9
     },
     "bySource": {},
     "usedIds": [
-      0,
-      1,
-      2,
-      3,
-      4
+      5,
+      6,
+      7,
+      8,
+      9
     ]
   }
 }
