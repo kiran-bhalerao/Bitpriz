@@ -8,6 +8,7 @@ class Navbar extends Component {
       <>
         <Head>
           <title>BitPriz</title>
+          <link rel="shortcut icon" href="#" />
           <link
             rel="stylesheet"
             href="https://bootswatch.com/4/lumen/bootstrap.min.css"
